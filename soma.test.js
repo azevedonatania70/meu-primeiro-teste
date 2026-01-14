@@ -1,7 +1,11 @@
-// Um teste simples: verificamos se 1 + 1 é igual a 2
-test('Verifica se a soma de 1 + 1 é 2', () => {
-  if (1 + 1 !== 2) {
-    throw new Error("O teste falhou! 1 + 1 não deu 2");
-  }
-  console.log("Sucesso! O teste de soma passou.");
-});
+// Função simples de soma
+const soma = (a, b) => a + b;
+
+console.log("Iniciando teste de soma...");
+
+if (soma(1, 1) === 2) {
+  console.log("Sucesso! O teste de soma passou (1+1=2).");
+} else {
+  console.error("Erro! O teste falhou.");
+  process.exit(1); // Isso avisa ao GitHub que o teste deu erro
+}
