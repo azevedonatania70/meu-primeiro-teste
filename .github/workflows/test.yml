@@ -6,9 +6,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+
+      - name: Instalando Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install
-      - run: npm test
-      
+          cache: 'npm' # Isso ajuda a carregar mais rápido
+
+      - name: Instalando Dependências
+        run: npm install
+
+      - name: Rodando Testes com Jest
+        run: npx jest # Usamos 'npx' para garantir que ele ache o Jest instalado
