@@ -11,10 +11,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm' # Isso ajuda a carregar mais rápido
 
-      - name: Instalando Dependências
+      - name: Instalando dependencias
         run: npm install
 
-      - name: Rodando Testes com Jest
-        run: npx jest # Usamos 'npx' para garantir que ele ache o Jest instalado
+      - name: Rodando os testes
+        run: npm test
