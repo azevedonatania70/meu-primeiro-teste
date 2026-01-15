@@ -1,11 +1,9 @@
-// Função simples de soma
 const soma = (a, b) => a + b;
 
-console.log("Iniciando teste de soma...");
+test('deve somar 1 + 1 e o resultado ser 2', () => {
+  expect(soma(1, 1)).toBe(2);
+});
 
-if (soma(1, 1) === 2) {
-  console.log("Sucesso! O teste de soma passou (1+1=2).");
-} else {
-  console.error("Erro! O teste falhou.");
-  process.exit(1); // Isso avisa ao GitHub que o teste deu erro
-}
+test('deve somar 5 + 5 e o resultado ser 10', () => {
+  expect(soma(5, 5)).toBe(10);
+});
